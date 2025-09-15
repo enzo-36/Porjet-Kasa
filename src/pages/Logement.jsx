@@ -38,7 +38,7 @@ export default function Logement() {
           </div>
         </div>
       </div>
-
+      <div className="logement-collapses">
       <div className="collapse">
         <div className="collapse-header">Description</div>
         <div className="collapse-content">{logement.description}</div>
@@ -54,6 +54,7 @@ export default function Logement() {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 }

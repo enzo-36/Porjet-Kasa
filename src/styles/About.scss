@@ -1,31 +1,17 @@
 html, body, #root {
   height: 100%;
   margin: 0;
+  background-color: white;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
+ }
 
 main {
   flex: 1; 
 }
-
-
-.about {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-}
-
-.about-banner {
-  margin: 20px auto;
-  max-width: 1240px;
-  height: 200px;
-  border-radius: 20px;
-  overflow: hidden;
 
   .banner-img {
     width: 100%;
@@ -33,14 +19,15 @@ main {
     object-fit: cover;
    
   }
+.about-banner::after {
+  background: none !important;
 }
 
 .dropdowns {
-  max-width: 1024px;
-  margin: 40px auto;
+  width: 70%;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   
 }
 
