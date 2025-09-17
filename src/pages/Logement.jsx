@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useLogements from "../hooks/useLogements";
 import Slideshow from "../components/Slideshow";
+import Collapse from "../components/Collapse";  
 import "../styles/Logements.scss";
 
 export default function Logement() {
@@ -38,23 +39,20 @@ export default function Logement() {
           </div>
         </div>
       </div>
-      <div className="logement-collapses">
-      <div className="collapse">
-        <div className="collapse-header">Description</div>
-        <div className="collapse-content">{logement.description}</div>
-      </div>
 
-      <div className="collapse">
-        <div className="collapse-header">Équipements</div>
-        <div className="collapse-content">
-          <ul>
-            {logement.equipments.map((eq, i) => (
-              <li key={i}>{eq}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="logement-collapses">
+        <Collapse title="Description" content={logement.description} />
+        <Collapse
+          title="Équipements"
+          content={
+            <ul>
+              {logement.equipments.map((eq, i) => (
+                <li key={i}>{eq}</li>
+              ))}
+            </ul>
+          }
+        />
       </div>
-    </div>
     </div>
   );
 }
