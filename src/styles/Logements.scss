@@ -1,6 +1,5 @@
 .logement-page {
-  max-width: 100%;
-  margin: 20px 60px;
+  margin: 20px 20px;
   padding: 20px;
 
   .slideshow {
@@ -18,15 +17,6 @@
   }
 }
 
-.logement-image {
-  width: 100%;         
-  height: 600px;   
-  object-fit: cover;    
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-
 .logement-info {
   display: flex;
   justify-content: space-between;
@@ -42,18 +32,16 @@
 .logement-collapses {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  gap: 80px;
   margin-top: 20px;
-  flex-wrap: wrap; 
 }
 
 .tags {
   display: flex;
   gap: 20px;
-  
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
 }
+
 .tag{
   color: white;
   background-color: #ff6060;
@@ -61,34 +49,12 @@
   border-radius: 12px;
 }
 
-
 .collapse {
-  flex: 1 1 48%;   
-  min-width: 300px; 
+  flex: 1 1 48%;    
 }
-
-
-.collapse {
-  flex: 1 1 48%;   
-  min-width: 300px; 
-  margin-top: 10px;
-}
-
-.collapse-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #ff6060;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.collapse-content {
-  padding: 15px;
-  background-color: #f7f7f7;
-  border-radius: 5px;
-  margin-top: 5px;
+.host-name {
+  color: #ff6060;
+  font-size: 1.5rem;
 }
 
 .host-rating {
@@ -97,7 +63,6 @@
   align-items: flex-end; 
   gap: 15px; 
 }
-
 
 .host {
   display: flex;
@@ -121,4 +86,85 @@
 .rating span {
   font-size: 3rem; 
   color: #ff6060;
+}
+
+@media (max-width: 768px) { 
+  .logement-page {
+    margin: 10px 20px;
+    padding: 10px;
+
+    .slideshow {
+      height: 300px; 
+    }
+  }
+
+  .logement-image {
+    height: 300px; 
+  }
+
+  .logement-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logement-collapses {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+
+  .tags {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tag {
+    padding: 4px 20px;
+  }
+
+  .collapse {
+    flex: 1 1 100%;
+    min-width: auto;
+    margin-top: 10px;
+  }
+
+  
+  .host-rating {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    
+  }
+  
+
+  .host {
+    order: 2; 
+    
+  }
+
+  .host-name {
+    font-size: 1rem;
+  }
+
+  .host img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .rating {
+    gap: 6px;
+    order: 1; 
+  }
+
+  .rating span {
+    font-size: 1.5rem;
+  }
+}
+
+.logement-info h1 {
+  font-size: 1.5rem;
 }

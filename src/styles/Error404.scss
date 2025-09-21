@@ -23,6 +23,26 @@
     color: black;
     padding: 80px
 }
+}
 
+@media (max-width: 768px) {
+  .error404 {
+    height: auto; 
+    padding: 60px;
 
+    h1 {
+      font-size: 8rem; 
+      margin: 40px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    a {
+      padding: 60px; 
+      font-size: 1.2rem;
+    }
+  }
 }

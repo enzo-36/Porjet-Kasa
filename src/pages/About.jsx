@@ -1,6 +1,7 @@
 import "../styles/About.scss";
 import Collapse from "../components/Collapse";
 import { aboutList } from "../data/AboutList";
+import '../styles/_mixins.scss';
 
 export default function About() {
   return (

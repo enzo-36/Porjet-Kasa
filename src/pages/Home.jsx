@@ -1,5 +1,6 @@
 import useLogements from "../hooks/useLogements";
 import {Link} from"react-router-dom";
+import '../styles/_mixins.scss';
 export default function Home() {
 
   const logements = useLogements();

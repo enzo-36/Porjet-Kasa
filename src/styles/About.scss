@@ -1,45 +1,41 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
-  margin: 0;
   background-color: white;
 }
 
 #root {
   display: flex;
   flex-direction: column;
- }
-
-main {
-  flex: 1; 
 }
 
-  .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   
-  }
+main {
+  flex: 1;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-banner {
+  margin: 40px;
+}
+
 .about-banner::after {
   background: none !important;
 }
 
 .dropdowns {
-  width: 70%;
+  width: 75%;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
-  
 }
 
 .dropdown {
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: left;
-
-  .dropdown-header {
     width: 100%;
-    padding: 15px;
     background-color: #ff6060;
     color: white;
     border: none;
@@ -47,17 +43,3 @@ main {
     cursor: pointer;
     text-align: left;
   }
-
-  .dropdown-content {
-    padding: 15px;
-    background: white;
-    display: none; 
-  }
-}.collapse-header{
-    background-color: #ff6060;
-}
-
-.collapse h3 {
-    color: white;
-    
-}

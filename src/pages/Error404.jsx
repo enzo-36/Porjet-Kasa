@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/Error404.scss";
-
+import '../styles/_mixins.scss';
 export default function Error404() {
   return (
     <div className="error404">

@@ -1,15 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import useLogements from "../hooks/useLogements";
 import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";  
 import "../styles/Logements.scss";
+import "../styles/_mixins.scss";
+
 
 export default function Logement() {
   const { id } = useParams();
-  const logements = useLogements();
+  const logements = useLogements() || [];
   const logement = logements.find((l) => l.id === id);
 
-  if (!logement) return null;
+if (!logement) return <Navigate to="/404" replace />;
 
   return (
     <div className="logement-page">
@@ -18,7 +20,7 @@ export default function Logement() {
       <div className="logement-info">
         <div>
           <h1 className="title">{logement.title}</h1>
-          <p className="location">{logement.location}</p>
+          <h3 className="location">{logement.location}</h3>
           <div className="tags">
             {logement.tags.map((tag, i) => (
               <span key={i} className="tag">{tag}</span>
@@ -28,7 +30,7 @@ export default function Logement() {
 
         <div className="host-rating">
           <div className="host">
-            <span>{logement.host.name}</span>
+            <div className="host-name">{logement.host.name}</div>
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
 

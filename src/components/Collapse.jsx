@@ -23,7 +23,7 @@ export default function Collapse({ title, content }) {
 
       <div className="collapse-content" role="region" aria-hidden={!isOpen}>
         {content}
-      </div>
+      </div> 
     </div>
   );
 }
